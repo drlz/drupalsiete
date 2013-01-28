@@ -1,6 +1,18 @@
 <?php
 
 /**
+ * Implementation of page alter
+ */
+function drupalsiete_page_alter(&$page) {
+  global $user;
+
+  // Check to see if $user has the administrator role.
+  if (in_array('administrator', array_values($user->roles))) {
+    drupal_add_css(path_to_theme() . '/css/diagnostic.css');
+  }
+}
+
+/**
  * Implementation of node preprocess.
  */
 function drupalsiete_preprocess_node(&$variables) {

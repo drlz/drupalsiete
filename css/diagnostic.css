@@ -1,0 +1,24 @@
+/* based on Kathryn S. Meyer diagnostic.css:
+http://meyerweb.com/eric/tools/css/diagnostics/index.html */
+
+div:empty, span:empty,
+li:empty, p:empty,
+td:empty, th:empty { padding: 0.5em; background: yellow; opacity: 0.2; }
+
+*[style], font, center { outline: 5px solid rgba(54, 54, 236, 0.2); }
+*[class=""], *[id=""] { outline: 5px dotted rgba(255,0,0,0.2); }
+
+img[alt=""] { border: 3px dotted rgba(255,0,0,0.2); }
+img:not([alt]) { border: 5px solid rgba(255,0,0,0.2); }
+img[title=""] { outline: 3px dotted fuchsia; }
+img:not([title]) { outline: 5px solid fuchsia ;}
+
+table:not([summary]) { outline: 5px solid rgba(255,0,0,0.2); }
+table[summary=""] { outline: 3px dotted rgba(255,0,0,0.2); }
+th {border: 2px solid  rgba(255,0,0,0.1); }
+th[scope="col"], th[scope="row"] {border: none; }
+
+a[href]:not([title]) { border: 5px solid rgba(255,0,0,0.2); }
+a[title=""] { outline: 3px dotted  rgba(255,0,0,0.2); }
+a[href="#"] { background: rgba(255,255,0,0.2); }
+a[href=""] { background: fuchsia; }
